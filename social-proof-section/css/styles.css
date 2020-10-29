@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+:root {
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.5rem;
+	font-family: "Spartan", sans-serif;
+	box-sizing: inherit;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	height: 100vh;
+	max-width: 1600px;
+	padding: 6rem 12rem;
+	margin: 0 auto;
+	background-image: url("../images/bg-pattern-top-desktop.svg"),
+		url("../images/bg-pattern-bottom-desktop.svg");
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+	background-position-x: 0%, 100%;
+	background-position-y: 0%, 100%;
+	background-size: 35%, 75%;
+}
+
+#headers {
+	float: left;
+	width: 50%;
+}
+
+h1 {
+	color: var(--very-dark-magenta);
+	font-size: 4.1rem;
+	line-height: 4rem;
+	letter-spacing: -0.09rem;
+	font-weight: 700;
+}
+
+#description {
+	color: var(--dark-grayish-magenta);
+	font-size: 1.5rem;
+	padding-right: 10%;
+	padding-top: 1rem;
+	line-height: 1.9rem;
+	font-weight: 500;
+}
+
+#ratings {
+	float: right;
+	width: 50%;
+}
+
+.rating {
+	width: 85%;
+	background: var(--light-grayish-magenta);
+	border-radius: 5px;
+	padding: 1.4rem 0;
+	margin: 1.4rem 0;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.rating:nth-of-type(2) {
+	margin-left: 3rem;
+}
+
+.rating:nth-of-type(3) {
+	margin-left: 6rem;
+}
+
+.rating__stars {
+	padding-left: 2.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rating__stars img {
+	width: 1.8rem;
+	padding-right: 0.5rem;
+}
+
+.rating__text {
+	display: flex;
+	align-items: center;
+	padding-left: 2rem;
+	color: var(--very-dark-magenta);
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+#quotes {
+	width: 100%;
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.quote {
+	background: var(--very-dark-magenta);
+	color: var(--white);
+	width: 31%;
+	font-size: 1.5rem;
+	border-radius: 5px;
+	padding: 3rem 2rem;
+}
+
+.quote:nth-of-type(2) {
+	margin-top: 1rem;
+}
+.quote:nth-of-type(3) {
+	margin-top: 2rem;
+}
+
+.quote__header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 2rem;
+}
+
+.quote__header img {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	margin-right: 2rem;
+}
+
+.quote__header__name h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-bottom: 0.3rem;
+}
+
+.quote__header__name h3 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: var(--soft-pink);
+}
+
+.quote__text {
+	color: var(--light-grayish-magenta);
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.9rem;
+	letter-spacing: -0.05rem;
+}
+
+.attribution {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: var(--soft-pink);
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	html {
+		font-size: 50%;
+	}
+
+	main {
+		height: auto;
+		padding: 6rem 1.5rem;
+		padding-bottom: 0;
+		background-image: url("../images/bg-pattern-top-mobile.svg"),
+			url("../images/bg-pattern-bottom-mobile.svg");
+		background-size: 100%, 100%;
+	}
+
+	#headers {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		letter-spacing: 0;
+	}
+
+	#description {
+		padding-right: 0;
+		padding-top: 1.5rem;
+		line-height: 2.5rem;
+	}
+
+	#ratings {
+		float: none;
+		width: 100%;
+	}
+
+	.rating {
+		width: 100%;
+		background: var(--light-grayish-magenta);
+		border-radius: 5px;
+		padding: 1.4rem 0;
+		margin: 1.4rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.rating:nth-of-type(2),
+	.rating:nth-of-type(3) {
+		margin-left: 0;
+	}
+
+	.rating__stars {
+		padding: 0;
+	}
+
+	.rating__text {
+		display: flex;
+		align-items: center;
+		padding-top: 1rem;
+	}
+
+	#quotes {
+		flex-direction: column;
+	}
+
+	.quote {
+		width: 100%;
+		margin-bottom: 1.5rem;
+	}
+
+	.quote:nth-of-type(2),
+	.quote:nth-of-type(3) {
+		margin-top: 0;
+	}
+
+	.quote__text {
+		color: var(--light-grayish-magenta);
+		font-weight: 400;
+		font-size: 1.3rem;
+		line-height: 1.9rem;
+		letter-spacing: -0.05rem;
+	}
+
+	.attribution {
+		position: static;
+	}
+}

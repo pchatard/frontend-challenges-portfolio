@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+	/* DARK MODE */
+	--background-dark: hsl(230, 17%, 14%);
+	--background-dark-top: hsl(232, 19%, 15%);
+	--card-background-blue: hsl(228, 28%, 20%);
+	--card-background-blue-hover: hsl(228, 28%, 27%);
+	--text-blue: hsl(228, 34%, 66%);
+	--text-white: hsl(0, 0%, 100%);
+
+	/* LIGHT MODE */
+	--background-light: hsl(0, 0%, 100%);
+	--background-top-light: hsl(225, 100%, 98%);
+	--card-background-light: hsl(227, 47%, 96%);
+	--card-background-hover: hsl(227, 47%, 92%);
+	--text-dark: hsl(228, 12%, 44%);
+	--text-very-dark: hsl(230, 17%, 14%);
+
+	/* Primary colors */
+	--lime-green: hsl(163, 72%, 41%);
+	--bright-red: hsl(356, 69%, 56%);
+	--facebook: hsl(208, 92%, 53%);
+	--twitter: hsl(203, 89%, 53%);
+	--instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+	--youtube: hsl(348, 97%, 39%);
+
+	/* Toggle button */
+	--toggle-dark: linear-gradient(
+		90deg,
+		hsl(210, 78%, 56%),
+		hsl(146, 68%, 55%)
+	);
+	--toggle-light: hsl(230, 22%, 74%);
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3rem 12rem 15rem 12rem;
+	border-radius: 0 0 10px 10px;
+	background-color: var(--background-top-light);
+}
+
+h1 {
+	font-weight: 700;
+}
+
+.header__followers {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--text-dark);
+}
+
+header .theme-toggler {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+	width: 20rem;
+}
+
+#toggle-label {
+	color: var(--text-dark);
+	font-weight: 700;
+	position: absolute;
+	left: 5rem;
+	width: 100%;
+	z-index: 10;
+	cursor: pointer;
+}
+
+#deco-light,
+#deco-dark {
+	display: none;
+}
+
+.toggle__container {
+	display: flex;
+	align-items: center;
+	padding: 0 2px;
+	width: 5rem;
+	height: 2.6rem;
+	background-color: hsl(227, 47%, 87%);
+	border-radius: 25px;
+}
+
+#deco-label-dark {
+	position: absolute;
+	z-index: 3;
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--background-top-light);
+	border-radius: 50%;
+	transform: translateX(2.5rem);
+	transition: all 0.2s;
+}
+
+main {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+#accounts__overview {
+	position: absolute;
+	top: -15rem;
+	width: 100%;
+	padding: 3rem 12rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 3rem;
+	background-color: transparent;
+}
+
+.bg {
+	padding-top: 4px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.facebook {
+	background: var(--facebook);
+}
+
+.twitter {
+	background: var(--twitter);
+}
+
+.instagram {
+	background: var(--instagram);
+}
+
+.youtube {
+	background: var(--youtube);
+}
+
+.account__container {
+	background: var(--card-background-light);
+	border-radius: 0 0 3px 3px;
+	height: 100%;
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+}
+
+.account__container:hover,
+.stat__container:hover {
+	background: var(--card-background-hover);
+}
+
+.account__username {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+
+.account__username img {
+	max-width: 100%;
+	height: auto;
+	padding: 0 1rem;
+}
+
+.account__followers__container {
+	padding: 3rem 0;
+	text-align: center;
+}
+
+.account__followers {
+	font-size: 6rem;
+	font-weight: 700;
+}
+
+.account__followers__text {
+	font-size: 1.4rem;
+	color: var(--text-dark);
+	letter-spacing: 0.4rem;
+	text-transform: uppercase;
+}
+
+.account__evolution {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.positive {
+	color: #1eb589;
+}
+
+.negative {
+	color: #dc414c;
+}
+
+#accounts__today {
+	background-color: var(--background-light);
+	padding: 2rem 12rem;
+	padding-top: 15rem;
+}
+
+h2 {
+	color: var(--text-dark);
+	font-weight: 700;
+}
+
+.overview__container {
+	padding: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 2;
+	column-gap: 3rem;
+	row-gap: 2.5rem;
+}
+
+.stat__container {
+	background: var(--card-background-light);
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	border-radius: 5px;
+	padding: 2.5rem 2rem;
+}
+
+.stat__type {
+	font-size: 1.4rem;
+	color: var(--text-dark);
+	font-weight: 700;
+}
+
+.stat__container img {
+	justify-self: end;
+}
+
+.stat__number {
+	font-size: 3rem;
+	color: var(--text-very-dark);
+	font-weight: 700;
+	align-self: end;
+}
+
+.stat__evolution {
+	font-weight: 700;
+	font-size: 1.2rem;
+	justify-self: end;
+	align-self: end;
+}
+
+.stat__evolution img {
+	padding-bottom: 2px;
+}
+
+#theme {
+	display: none;
+}
+
+#theme:checked ~ header {
+	background-color: var(--background-dark-top);
+	box-shadow: 0px 0px 5px 10px var(--background-dark-top);
+}
+
+#theme:checked ~ header #toggle-label {
+	color: var(--text-blue) !important;
+}
+
+#theme:checked ~ header #toggle-label:hover {
+	color: var(--text-white) !important;
+}
+
+#theme:checked ~ header .toggle__container {
+	background: var(--toggle-dark);
+}
+
+#theme:checked ~ header #deco-label-dark {
+	transform: translateX(0);
+	background-color: var(--background-dark-top);
+}
+
+#theme:checked ~ main,
+#theme:checked ~ header {
+	color: var(--text-white);
+}
+
+#theme:checked ~ main {
+	background-color: var(--background-dark);
+}
+
+#theme:checked ~ main #accounts__today {
+	background-color: var(--background-dark);
+}
+
+#theme:checked ~ header .header__followers,
+#theme:checked ~ main .stat__type,
+#theme:checked ~ main .account__username {
+	color: var(--text-blue);
+}
+
+#theme:checked ~ header #toggle-label,
+#theme:checked ~ main h2,
+#theme:checked ~ main .stat__number {
+	color: var(--text-white);
+}
+
+#theme:checked ~ main .account__container,
+#theme:checked ~ main .stat__container {
+	background: var(--card-background-blue);
+}
+
+#theme:checked ~ main .account__container:hover,
+#theme:checked ~ main .stat__container:hover {
+	background: var(--card-background-blue-hover);
+}
+
+#theme:checked ~ footer {
+	color: var(--text-white);
+	background-color: var(--background-dark);
+}
+
+a {
+	color: inherit;
+}
+
+@media (max-width: 900px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media (max-width: 600px) {
+	html {
+		font-size: 40%;
+	}
+
+	body {
+		height: auto;
+		overflow: auto;
+	}
+
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 3rem 3rem 15rem 3rem;
+	}
+
+	.theme-toggler {
+		border-top: 1px solid var(--card-background-light);
+		margin: 2rem 0;
+		padding: 2rem 0;
+		justify-content: space-between;
+	}
+
+	#accounts__overview {
+		padding: 0 3rem;
+		padding-bottom: 2rem;
+		grid-template-columns: 1fr;
+		row-gap: 2rem;
+		background-color: transparent;
+	}
+
+	.bg {
+		padding-top: 4px;
+		border-radius: 3px;
+		overflow: hidden;
+	}
+
+	#accounts__today {
+		padding: 0 3rem;
+		padding-top: 90rem;
+	}
+
+	.overview__container {
+		padding-top: 2rem;
+		grid-template-columns: 1fr;
+		row-gap: 2.5rem;
+	}
+}

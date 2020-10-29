@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>FAQ Accordion Card</title>
+
+		<link rel="stylesheet" href="css/styles.css" />
+		<script
+			src="https://kit.fontawesome.com/2eb37e9b40.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/index.js" defer></script>
+	</head>
+	<body>
+		<main class="container">
+			<div class="images">
+				<img
+					src="images/illustration-woman-online-mobile.svg"
+					alt="Woman desk"
+					id="woman"
+				/>
+				<img
+					src="images/illustration-box-desktop.svg"
+					alt="Box"
+					id="box"
+				/>
+			</div>
+			<div class="faq">
+				<h1 id="faq__title">FAQ</h1>
+				<ul id="faq__questions">
+					<li>
+						<section class="question">
+							<div class="question__header">
+								<h2 class="question__header__title">
+									How many team members can I invite?
+								</h2>
+								<i
+									class="fas fa-chevron-down question__header__icon"
+								></i>
+							</div>
+							<p class="question__answer">
+								You can invite up to 2 additional users on the
+								Free plan. There is no limit on team members for
+								the Premium plan.
+							</p>
+						</section>
+					</li>
+					<li>
+						<section class="question active">
+							<div class="question__header">
+								<h2 class="question__header__title">
+									What is the maximum file upload size?
+								</h2>
+								<i
+									class="fas fa-chevron-down question__header__icon"
+								></i>
+							</div>
+							<p class="question__answer">
+								No more than 2GB. All files in your account must
+								fit your allotted storage space.
+							</p>
+						</section>
+					</li>
+					<li>
+						<section class="question">
+							<div class="question__header">
+								<h2 class="question__header__title">
+									How do I reset my password?
+								</h2>
+								<i
+									class="fas fa-chevron-down question__header__icon"
+								></i>
+							</div>
+							<p class="question__answer">
+								Click “Forgot password” from the login page or
+								“Change password” from your profile page. A
+								reset link will be emailed to you.
+							</p>
+						</section>
+					</li>
+					<li>
+						<section class="question">
+							<div class="question__header">
+								<h2 class="question__header__title">
+									Can I cancel my subscription?
+								</h2>
+								<i
+									class="fas fa-chevron-down question__header__icon"
+								></i>
+							</div>
+							<p class="question__answer">
+								Yes! Send us a message and we’ll process your
+								request no questions asked.
+							</p>
+						</section>
+					</li>
+					<li>
+						<section class="question">
+							<div class="question__header">
+								<h2 class="question__header__title">
+									Do you provide additional support?
+								</h2>
+								<i
+									class="fas fa-chevron-down question__header__icon"
+								></i>
+							</div>
+							<p class="question__answer">
+								Chat and email support is available 24/7. Phone
+								lines are open during normal business hours.
+							</p>
+						</section>
+					</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://github.com/pchatard">Pierre</a>.
+		</footer>
+	</body>
+</html>

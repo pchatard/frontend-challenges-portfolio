@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+	--gradient-start: hsl(6, 100%, 80%);
+	--gradient-end: hsl(335, 100%, 65%);
+	--pale-blue: hsl(243, 100%, 93%);
+	--grayish-blue: hsl(229, 7%, 55%);
+	--dark-blue: hsl(228, 56%, 26%);
+	--very-dark-blue: hsl(229, 57%, 11%);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4rem;
+	font-family: "Raleway", sans-serif;
+	box-sizing: inherit;
+	height: 100vh;
+	background: var(--very-dark-blue) url("../images/bg-desktop.png");
+	background-repeat: no-repeat;
+	background-size: 100% 50%;
+	background-position: 0 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--pale-blue);
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+#actions {
+	border-radius: 5px;
+	border-top-right-radius: 25%;
+	padding: 3rem;
+	padding-right: 10rem;
+	background-color: var(--dark-blue);
+	margin-right: 2rem;
+}
+
+#actions > img {
+	width: 80%;
+	padding-bottom: 2rem;
+}
+
+.buttons > img {
+	width: 3.5rem;
+	height: 3.5rem;
+	padding: 1rem;
+	background-color: var(--very-dark-blue);
+	border-radius: 5px;
+	margin: 0 0.5rem;
+}
+
+#progress {
+	border-radius: 5px;
+	padding: 2rem 3rem;
+	width: 40rem;
+	margin-top: 2rem;
+	background-color: var(--dark-blue);
+	position: relative;
+}
+
+h1 {
+	font-size: 1.4rem;
+	font-weight: 400;
+	width: 100%;
+}
+
+h1 span {
+	font-weight: 700;
+}
+
+.slider {
+	width: 100%;
+	margin: 1rem 0;
+	height: 1.5rem;
+	padding: 2px;
+	border-radius: 25px;
+	background-color: var(--very-dark-blue);
+}
+
+.slider__progress {
+	width: 75%;
+	height: 100%;
+	border-radius: 25px;
+	background: linear-gradient(var(--gradient-start), var(--gradient-end));
+	position: relative;
+}
+
+.slider__point {
+	position: absolute;
+	right: 1px;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: white;
+}
+
+.slider__limits {
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+}
+
+.popup {
+	position: absolute;
+	top: -35%;
+	right: 3rem;
+	background: white;
+	color: black;
+	display: flex;
+	align-items: center;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	border-bottom-right-radius: 0;
+}
+
+.popup:after {
+	content: "";
+	position: absolute;
+	background-color: white;
+	width: 2rem;
+	height: 2rem;
+	bottom: -1.8rem;
+	right: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.popup span {
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+.attribution {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	body {
+		background: url("../images/bg-mobile.png");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0;
+	}
+
+	main {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#actions {
+		margin: 0 auto;
+	}
+
+	.buttons > img {
+		width: 4rem;
+		height: 4rem;
+	}
+
+	#progress {
+		width: 100%;
+		margin: 0;
+		margin-top: 2rem;
+	}
+
+	.popup {
+		top: auto;
+		bottom: -35%;
+		right: 50%;
+		transform: translateX(50%);
+		border-radius: 5px;
+	}
+
+	.popup:after {
+		display: none;
+	}
+}
