@@ -51,10 +51,11 @@ main {
     flex-direction: column;
     border-radius: 5px;
     text-decoration: none;
+    max-width: 40rem;
 }
 
 .website__preview {
-    height: 20rem;
+    min-height: 20rem;
     width: 100%;
     border-radius: 5px 5px 0 0;
     filter: grayscale(100%);
@@ -123,7 +124,7 @@ footer a, footer span {
     font-weight: bold;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     p.header__description {
         width: 80%;
