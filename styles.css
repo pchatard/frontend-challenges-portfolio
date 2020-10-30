@@ -13,8 +13,7 @@ body {
     font-family: 'Avenir', sans-serif;
     box-sizing: border-box;
     background: url('images/background.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -31,10 +30,15 @@ p.header__description {
     margin: 0 auto;
 }
 
+a.frontendmentor {
+    color: #127475;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 main {
     width: 80%;
     margin: 3rem auto;
-    margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(30rem, 1fr));
     grid-gap: 2rem;
@@ -50,7 +54,7 @@ main {
 }
 
 .website__preview {
-    height: auto;
+    height: 20rem;
     width: 100%;
     border-radius: 5px 5px 0 0;
     filter: grayscale(100%);
@@ -104,4 +108,54 @@ h2 {
 
 .tag:not(:first-of-type) {
     margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
+
+    p.header__description {
+        width: 80%;
+    }
+
+    main {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(30rem, 1fr));
+        grid-gap: 3rem;
+    }
+
+    .website__preview {
+        filter: grayscale(0%);
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    p.header__description {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    
+    main {
+        width: 90%;
+        grid-template-columns: auto;
+    }
+    
+    .website__preview {
+        height: auto;
+    }
+    
+    .website__info {
+        height: 10rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .tag {
+        font-size: 1.6rem;
+    }
 }
