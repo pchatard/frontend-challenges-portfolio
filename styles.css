@@ -110,6 +110,19 @@ h2 {
     margin-left: 1rem;
 }
 
+footer {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+footer a, footer span {
+    text-decoration: none;
+    color: #127475;
+    font-weight: bold;
+}
+
 @media (max-width: 900px) {
 
     p.header__description {
